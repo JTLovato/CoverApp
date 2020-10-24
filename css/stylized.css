@@ -1,0 +1,640 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 0.5s;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 5px;
+    align-items: center;
+}
+
+
+
+.mainNav a {
+    height: 30px;
+    margin-left: 10px;
+}
+
+.randomArtistHold a {
+    color: #e24400;
+}
+
+.fullLogo {
+    display: none;
+}
+
+.form-inline {
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 3px;
+}
+
+.form-inline button {
+    margin: 0 3px;
+    padding: 2px;
+    font-size: 75%;
+}
+
+#darkModeBtn {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 75%;
+    margin-left: 50px;
+    background-color: black;
+    color: white;
+}
+
+.btn-outline-light {
+    border-color: #e24400;
+}
+
+.form-control {
+    padding: 2px 4px;
+    font-size: 75%;
+    width: 50%;
+}
+
+.mainLogo {
+    height: 30px;
+    width: 30px;
+
+}
+
+.profile {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.divHold {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.NaT, .genresForYou {
+    width: 100%;
+}
+
+.newTrendingHeader, .forYouHeader {
+    width: 100%;
+    text-align: center;
+    font-family: 'Rokkitt', serif;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 5px;
+}
+.newTrendingHeader h4, .forYouHeader h4 {
+    margin: 5px 0 0;
+}
+.newTrendingHeader .orange {
+    font-size: 175%;
+    margin: 0 5px;
+}
+
+.forYouHeader .orange {
+    font-size: 160%;
+    margin: 0 5px;
+}
+.newTrendingHeader img, .forYouHeader img{
+    width: 20%;
+    height: 10%;
+    margin: 3% 3px 0;
+}
+
+
+.container {
+    background-color: #191919;
+    background-size: cover;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-width: 100%;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.songTime {
+    background-color: black;
+    width: 10%;
+    margin: -10% 85% 5px 5%;
+    transition: 0.5s;
+}
+.orange {
+    color: #e24400;
+}
+
+
+.containerImg {
+    width: 50%;
+    padding: 2%;
+    font-size: 60%;
+    text-align: center;
+}
+.containerImg img {
+    width: 96%;
+    border-radius: 50%;
+    border: solid 3px #e24400;
+}
+
+.artistInfo, .randomArtistInfo {
+    width: 45%;
+    height: 70%;
+    padding-top: 8%;
+    padding-left: 3px;
+    text-align: center;
+}
+
+.artistHold, .randomArtistHold {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-decoration: none
+}
+.artistHold h6, .randomArtistHold h6 {
+    font-size: 150%;
+}
+
+.checkmark {
+    width: 15px;
+    height: 15px;
+    margin-left: 4px;
+    margin-top: 3px;
+}
+.artistInfo p {
+    margin-bottom: 0;
+}
+
+.containerRandomImg {
+    width: 50%;
+    padding: 2%;
+    font-size: 60%;
+    text-align: center;
+}
+.containerRandomImg img {
+    width: 96%;
+    border-radius: 50% 0 0 50%;
+    border: solid 3px #e24400;
+}
+
+.randomContainer {
+    background-color: #191919;
+    background-size: cover;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    min-width: 100%;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.randomArtistHold {
+    flex-wrap: wrap;
+    padding: 7px;
+}
+.random-genre {
+    width: 100%;
+}
+
+
+
+/*                    Audio stylings             */
+
+
+/* container for music player */
+.musicContainer {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgb(48, 48, 48,.9) 40%, rgba(48,48,48,.9) 60%, rgba(0,0,0,.9) 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: solid #e24400 2px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 1;
+
+}
+
+/* container for play, pause, previous track, next track, and progress bar  */
+.playerHold {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: -25%;
+}
+
+.timeHold {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+    color: white;
+    margin-top: 2%;
+}
+
+/* album cover */
+#thumbnail, #thumbnail2 {
+    width: 80%;
+    transition: 1s;
+    z-index: 3;
+    border-radius: 50%;
+    border: solid #e24400 5px;
+    margin: 0 10% 1%;
+}
+
+/* track artist */
+.artistInfoHolder {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    top: 10%;
+    margin-top: -10%;
+}
+
+.artistInfoHolder div {
+    margin: 1px 26% 0;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    width: 48%;
+}
+
+.song-artist, .song-artist2 {
+    color: #e24400;
+    font-family: 'Montserrat', sans-serif;  
+    bottom: 21%;
+    font-size: 150%;
+    font-weight: 600;
+}
+
+/* track title */
+.song-title {
+    color: white;
+    font-size: 80%;
+}
+
+.song-original {
+    color: white;
+    font-size: 80%;
+}
+
+
+/* style for play and pause images */
+#play-pause, #play-pause2 {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/* style for next and previous song images */
+#next-song, #previous-song, #next-song2, #previous-song2 {
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+    font-size: 40px;
+    z-index: 4;
+    border: solid #e24400 3px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(74,74,74,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.playHold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 3px #e24400;
+    margin: 0 10%;
+    padding: 15px;
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(74,74,74,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+/* unique style for next song image */
+#next-song, #next-song2 {
+    padding: 2px 4px 2px 8px;
+}
+
+/* unique style for previous song image */
+#previous-song, #previous-song2 {
+    padding: 2px 8px 2px 4px;
+}
+
+/* style for current time of the track */
+.currentTime {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: white;
+    align-items: center;
+    margin: 5px 25px;
+}
+
+.playbtns {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+/* style for the total length of the track */
+.durationTime {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    align-items: center;
+    color: #ffffff;
+    margin: 5px 25px;
+}
+
+/* style for the progress bar */
+#progress-bar, #progress-bar2 {
+    appearance: none;
+    background: #5e5e5e;
+    width: 80%;
+    margin: 0 10%;
+    border-radius: 30px;
+}
+
+/* style for the progress bar's slider thumb */
+#progress-bar::-webkit-slider-thumb, #progress-bar2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -12px;
+    margin-left: 0px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    background: #e24400;
+    border-radius: 50px;
+    border: solid #000000 4px;
+    box-shadow: 0 0 0 4px #313131;
+    cursor: pointer;
+}
+
+/* style for the progress bar's runnable track */
+#progress-bar::-webkit-slider-runnable-track, #progress-bar2::-webkit-slider-runnable-track   {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    max-height: 5px;
+    border-radius: 30px;
+}
+
+/* style to remove blue shade of the progress bar when clicked on/selected */
+#progress-bar:focus, #progress-bar2:focus {
+    outline: none;
+}
+
+.bottomWidth {
+    position: absolute;
+    bottom: 5%;
+    width: 75%;
+    margin: 0 12.5%;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #6b6b6b;
+
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+.whiteBG {
+    background: rgb(255, 255, 255, .9);
+    color: black;
+}
+
+.whiteBG2 {
+    color: black;
+    background-color: rgba(0,0,0,0)
+}
+.offwhite {
+    background-color: #e9e9e9;
+}
+
+.mainLogo{
+    fill: #fff;
+}
+.whiteLogo {
+    fill: #e24400;
+}
+.borderSwitch {
+    border-top: solid #e24400 3px; 
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid #313131 3px; 
+}
+
+.secondLogo {
+    width: 75px;
+    margin: 10px 0;
+}
+
+.linkLine {
+    width: 25%;
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: solid #e24400 2px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.linkLine a {
+    margin-bottom: 15px;
+}
+
+.linkLine a img {
+    width: 30px;
+    height: 40px;
+}
+
+
+
+/*             Media Queries             */
+
+
+@media (min-width: 768px) {
+    .mainLogo {
+        width: 50px;
+        height: 50px;
+    }
+    .form-inline {
+        width: 30%;
+    }
+
+    .artistInfo, .randomArtistInfo {
+        font-size: 150%;
+    }
+
+    .artistInfo h5, .randomArtistInfo h5 {
+        font-size: 150%;
+    }
+    .artistInfo a, .randomArtistInfo a {
+        font-size: 150%;
+    }
+    .newTrendingHeader h4, .forYouHeader h4 {
+        font-size: 300%;
+    }
+    .newTrendingHeader .orange {
+        font-size: 300%;
+    }
+    .forYouHeader .orange {
+        font-size: 300%;
+    }
+    .checkmark {
+        width: 40px;
+        height: 40px;
+        margin-left: 14px;
+    }
+    .songTime {
+        font-size: 300%;
+    }
+
+    #thumbnail, #thumbnail2 {
+        width: 60%;
+        margin: 0 20%;
+    }
+}
+
+@media (min-width: 1024px) { 
+
+  .mainLogo {
+        width: 60px;
+        height: 60px;
+    }
+    .mainNav {
+        height: 80px;
+        align-items: center;
+    }
+    .profile {
+        height: 75px;
+    }
+    .profilePic {
+        margin-top: 20px;
+    }
+    .form-inline {
+        width: 30%;
+    }
+    .form-inline button {
+        padding: 10px;
+        font-size: 100%;
+    }
+    .form-control {
+        padding: 5px 10px;
+        font-size: 100%;
+        width: 50%;
+    }
+    #darkModeBtn {
+        font-size: 100%;
+        padding: 10px;
+    }
+    .NaT, .genresForYou {
+        width: 48%;
+        margin: 1%;
+    }
+    .artistHold h6, .randomArtistHold h6 {
+        font-size: 120%;
+    }
+    .artistHold a, .randomArtistHold a {
+        font-size: 120%;
+    }
+    .NaT, .genresForYou {
+        min-height: 100%;
+    }
+    .container {
+        min-height: 48%;
+        margin: 1%;
+    }
+    .newTrendingHeader img, .forYouHeader img {
+        margin: 3% 3px 0;
+    }
+
+    .randomContainer {
+        min-width: 23%;
+        max-width: 23%;
+        margin: 1%;
+    }
+    .randomArtistInfo {
+        font-size: 75%;
+    }
+
+    .forYouHeader {
+        margin-top: 4%;
+    }
+
+    .forYouHeader img {
+        width: 20%;
+        height: 10%;
+        margin: .5% 3% 0;
+    }
+    .musicContainer {
+        width: 800px;
+        margin: 0 auto;
+    }
+    #thumbnail, #thumbnail2 {
+        margin: 50px auto 30px;
+        width: 30%;
+    }
+
+    .playerHold {
+        margin-top: -5%;
+    }
+    .timeHold {
+        margin-bottom: -7%;
+    }
+
+    .linkLine a {
+        margin-top: 15px;
+    }
+
+    .linkLine a img {
+        width: 60px;
+        height: 80px;
+    }
+    
+
+}
