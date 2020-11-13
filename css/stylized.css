@@ -492,6 +492,11 @@ footer {
     height: 40px;
 }
 
+.linkLine a img {
+    width: 30px;
+    height: 40px;
+}
+
 
 
 /*             Media Queries             */
